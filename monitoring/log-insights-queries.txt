@@ -1,0 +1,15 @@
+# Error logs
+fields @timestamp, @message
+| filter @message like /ERROR/
+| sort @timestamp desc
+| limit 50
+
+# API latency tracking
+fields @timestamp, @message, @duration
+| sort @duration desc
+| limit 20
+
+# All backend logs
+fields @timestamp, @message
+| sort @timestamp desc
+| limit 100

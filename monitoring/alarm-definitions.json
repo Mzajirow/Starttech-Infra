@@ -1,0 +1,12 @@
+[
+  {
+    "alarm_name": "High-EC2-CPU",
+    "metric": "CPUUtilization",
+    "threshold": 80
+  },
+  {
+    "alarm_name": "ALB-High-Response-Time",
+    "metric": "TargetResponseTime",
+    "threshold": 1
+  }
+]
