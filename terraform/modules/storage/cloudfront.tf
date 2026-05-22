@@ -10,15 +10,15 @@ resource "aws_cloudfront_distribution" "cdn" {
 
   enabled = true
 
-default_cache_behavior {
-  target_origin_id       = "s3-origin"
-  viewer_protocol_policy = "redirect-to-https"
+  default_cache_behavior {
+    target_origin_id       = "s3-origin"
+    viewer_protocol_policy = "redirect-to-https"
 
-  allowed_methods = ["GET", "HEAD"]
-  cached_methods  = ["GET", "HEAD"]
+    allowed_methods = ["GET", "HEAD"]
+    cached_methods  = ["GET", "HEAD"]
 
-  cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6"
-}
+    cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6"
+  }
 
   restrictions {
     geo_restriction {

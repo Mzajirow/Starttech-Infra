@@ -38,15 +38,15 @@ resource "aws_lb_target_group" "tg" {
   vpc_id   = var.vpc_id
 
   health_check {
-  path                = "/ping"
-  port                = "traffic-port"   # explicitly use 8080
-  protocol            = "HTTP"
-  matcher             = "200"
-  interval            = 30
-  timeout             = 5
-  healthy_threshold   = 2
-  unhealthy_threshold = 3
-}
+    path                = "/ping"
+    port                = "traffic-port" # explicitly use 8080
+    protocol            = "HTTP"
+    matcher             = "200"
+    interval            = 30
+    timeout             = 5
+    healthy_threshold   = 2
+    unhealthy_threshold = 3
+  }
 }
 
 resource "aws_lb_listener" "http" {
@@ -149,7 +149,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] 
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {

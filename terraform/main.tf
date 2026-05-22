@@ -20,8 +20,8 @@ module "networking" {
 
 module "compute" {
   source         = "./modules/compute"
-  ami_id       = var.ami_id
-  docker_image = var.docker_image
+  ami_id         = var.ami_id
+  docker_image   = var.docker_image
   vpc_id         = module.networking.vpc_id
   public_subnets = module.networking.public_subnets
   project_name   = var.project_name
